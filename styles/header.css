@@ -1,0 +1,27 @@
+@tailwind components;
+
+@layer components {
+  .header {
+    @apply fixed top-0 left-0 right-0 py-3 md:py-4 xl:py-6 z-50 transition-all duration-300 border-b border-transparent;
+  }
+
+  .header.is-sticky {
+    @apply backdrop-blur-2xl lg:py-2 bg-primary/10 border-primary/10;
+  }
+
+  .navbar-nav {
+    @apply flex flex-col lg:flex-row;
+  }
+
+  .navbar-nav .nav-link {
+    @apply block lg:inline-block font-medium px-8 py-4 lg:px-5 lg:py-5 text-primary hover:text-white uppercase;
+  }
+
+  .mobile-menu {
+    @apply fixed right-0 top-0 h-screen w-full max-w-96 bg-black/80 backdrop-blur-xl translate-x-full transition-transform duration-300 ease-in-out;
+  }
+
+  .mobile-menu.is-show_menu {
+    @apply translate-x-0;
+  }
+}

@@ -1,0 +1,36 @@
+@tailwind components;
+
+@layer components {
+  .faq-accordion {
+    @apply flex flex-col gap-4;
+  }
+
+  .faq-accordion .szh-accordion__item {
+    @apply rounded-[10px] p-px bg-black border border-[#A5764D] relative overflow-hidden after:content-normal after:transition after:duration-300 after:absolute after:-top-2/3 after:left-0 after:h-full after:w-full after:bg-[#FCEB96] after:rounded-[100%] after:blur-3xl xl:after:blur-2xl after:opacity-20;
+  }
+
+  .faq-accordion .szh-accordion__item-heading,
+  .faq-accordion .szh-accordion__item-content {
+    @apply relative z-10;
+  }
+
+  .faq-accordion .szh-accordion__item .szh-accordion__item-btn {
+    @apply w-full flex justify-between text-start md:text-xl lg:text-2xl font-bold font-display rounded-[9px] px-4 py-3 lg:px-8 lg:py-5;
+  }
+
+  .faq-accordion .szh-accordion__item .szh-accordion__item-btn {
+    @apply after:content-normal after:inline-block after:w-6 after:h-6 after:bg-[url('/image/eva-arrow-down-fill.svg')] after:bg-contain after:bg-center;
+  }
+
+  .faq-accordion .szh-accordion__item.szh-accordion__item--expanded {
+    @apply after:top-1/2 after:left-1/2 after:h-[200%] after:w-[200%] after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-15;
+  }
+
+  .faq-accordion .szh-accordion__item.szh-accordion__item--expanded .szh-accordion__item-btn {
+    @apply after:rotate-180;
+  }
+
+  .faq-accordion .szh-accordion__item-content {
+    @apply px-4 pb-3 lg:px-8 lg:pb-5 text-sm md:text-base;
+  }
+}

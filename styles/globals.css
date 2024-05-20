@@ -1,0 +1,118 @@
+@import 'header';
+@import 'buttons';
+@import 'accordion';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #000000;
+  --white: #FFFFFF;
+  --primary: #FCEB96;
+}
+
+::selection {
+  color: #ffffff;
+  background: #ffbd80;
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Futura Md BT';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/futura/futuramediumbt-webfont.eot');
+    src: url('/fonts/futura/futuramediumbt-webfont.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/futura/futuramediumbt-webfont.woff2') format('woff2'),
+      url('/fonts/futura/futuramediumbt-webfont.woff') format('woff'),
+      url('/fonts/futura/futuramediumbt-webfont.ttf') format('truetype'),
+      url('/fonts/futura/futuramediumbt-webfont.svg#futura_md_btmedium') format('svg');
+  }
+
+  @font-face {
+    font-family: 'Cinzel Decorative';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/cinzeldecorative/v16/daaCSScvJGqLYhG8nNt8KPPswUAPni7TTMw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Cinzel Decorative';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/cinzeldecorative/v16/daaHSScvJGqLYhG8nNt8KPPswUAPniZoadlESTE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Cinzel Decorative';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/cinzeldecorative/v16/daaHSScvJGqLYhG8nNt8KPPswUAPniZQa9lESTE.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  html {
+    font-family: "Futura Md BT", system-ui, sans-serif;
+  }
+
+  body {
+    @apply text-white bg-black;
+  }
+
+  main {
+    @apply overflow-hidden;
+  }
+
+  .container {
+    @apply px-3 md:px-4;
+  }
+}
+
+@layer components {
+  .h2 {
+    @apply font-display text-2xl md:text-3xl lg:text-4xl text-primary font-bold drop-shadow;
+  }
+
+  .text-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-b from-secondary via-[#F5E3C9] to-secondary;
+  }
+
+  .mint-step {
+    @apply relative z-10 flex items-center h-full after:content-normal after:ps-px after:absolute after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:flex after:h-full after:border-e after:border-dashed after:-z-[1] before:content-normal before:flex before:w-4 before:h-4 before:bg-black before:absolute before:left-1/2 before:top-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full;
+  }
+
+  .nft-back-light {
+    @apply relative before:content-normal before:flex before:w-[200%] before:bg-primary before:aspect-[4/3] before:absolute before:rounded-[100%] before:blur-[280px];
+  }
+
+  .mint-pop {
+    @apply  fixed bottom-0 left-0 right-0 transition-all duration-500 translate-y-full md:translate-y-0;
+  }
+  .mint-pop .container {
+    @apply transition-all duration-500 py-4;
+  }
+
+  .mint-pop.is-show {
+    @apply fixed transition-all duration-500 bottom-0 left-0 right-0 translate-y-0;
+  }
+  .mint-pop.is-show .container {
+    @apply py-8;
+  }
+  .mint-pop.is-last {
+    @apply relative md:fixed md:bottom-0 md:left-0 md:right-0 translate-y-0;
+  }
+}
+
+.slide-nft {
+  --swiper-navigation-color: var(--white);
+  --swiper-navigation-size: 1.5rem;
+  --swiper-pagination-color: var(--primary);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}

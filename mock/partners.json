@@ -1,0 +1,14 @@
+[
+  {
+    "title": "PinkSale",
+    "src_light": "/partners/pinksale.png",
+    "src_dark": "/partners/pinksale.png",
+    "url": "https://www.pinksale.finance/launchpad/0x4BAbDF20Aaf72002AF7cA968857D5019adBaAb90?chain=BSC&refId=0xb118e85FA82e5E99fb6ea7A9ef28f2DD1834D26A"
+  },
+  {
+    "title": "DexView",
+    "src_light": "/partners/dexview.png",
+    "src_dark": "/partners/dexview.png",
+    "url": "https://www.dexview.com/"
+  }
+]
